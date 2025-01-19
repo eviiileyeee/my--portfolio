@@ -6,6 +6,9 @@ import  Dashboard  from "./pages/Dashboard";
 import Projects from './pages/Projects';
 import Contact from './pages/contact';
 import Skills from './pages/skills';
+import Footer from './components/Footer';
+import About from './pages/About';
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,8 +23,11 @@ function App() {
           <Route path="/skills" element={<Skills/>} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+
         </Routes>
       </main>
+      <Footer/>
     </BrowserRouter>
     </>
   );
