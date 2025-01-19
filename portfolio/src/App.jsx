@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar"
 import { BrowserRouter, Routes, Route, Link, useNavigate } from 'react-router-dom';
 import  Dashboard  from "./pages/Dashboard";
 import Projects from './pages/Projects';
+import Contact from './pages/contact';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,6 +16,7 @@ function App() {
       <main className="pt-16"> {/* Add padding-top to account for fixed navbar */}
         <Routes>
           <Route path="/" element={<Dashboard />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />
         </Routes>
       </main>

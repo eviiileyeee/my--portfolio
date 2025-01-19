@@ -1,13 +1,29 @@
 import React from 'react';
+import { ArrowUpRight } from 'lucide-react';
 
-const ProjectCard = ({ title, description, onClick }) => (
-  <div 
-    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-    onClick={onClick}
-  >
-    <div className="space-y-3">
+const ProjectCard = ({ title, description, projectUrl, onClick }) => (
+  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <div className="space-y-4">
       <h4 className="text-xl font-semibold text-gray-800">{title}</h4>
       <p className="text-gray-600">{description}</p>
+      <div className="flex justify-between items-center pt-4">
+        <button
+          onClick={onClick}
+          className="text-grey-600 hover:text-blue-800 font-medium"
+        >
+          Learn More
+        </button>
+        {projectUrl && (
+          <a
+            href={projectUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-white-600 text-black rounded-lg hover:bg-blue-300 transition-colors duration-200 shadow-lg"
+          >
+            Visit Project <ArrowUpRight size={16} />
+          </a>
+        )}
+      </div>
     </div>
   </div>
 );
@@ -30,27 +46,28 @@ const Projects = () => {
           api.
         </>
       ),
+      projectUrl: "https://quizzy-world.netlify.app/",
       onClick: () => openQuiz()
     },
     {
       title: "Med Harmony",
       description: "A Website which tells us about medical interaction between two medicines",
-      onClick: () => errInfo()
+      projectUrl: "https://your-med-harmony-url.com",
     },
     {
       title: "Calculator",
       description: "A simple calculator using HTML, CSS, and JavaScript",
-      onClick: () => refTO()
+      projectUrl: "https://haren-calc.netlify.app/",
     },
     {
       title: "Logic Gates",
       description: "A learning website which demonstrates working of logic gates. (not uploaded yet)",
-      onClick: () => errInfo()
+      projectUrl: "",  // Empty string for projects not yet deployed
     },
     {
       title: "Message Guard",
       description: "A website which encrypts texts to maintain security while delivering any sensitive information",
-      onClick: () => message_guard()
+      projectUrl: "https://your-message-guard-url.com",
     }
   ];
 
@@ -64,6 +81,7 @@ const Projects = () => {
               key={index}
               title={project.title}
               description={project.description}
+              projectUrl={project.projectUrl}
               onClick={project.onClick}
             />
           ))}
