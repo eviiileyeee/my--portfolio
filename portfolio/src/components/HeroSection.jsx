@@ -1,4 +1,6 @@
 import React from "react";
+import MyImage from '../assets/p.jpg';
+
 
 const HeroSection = () => {
     const handleInstagramClick = () => {
@@ -40,8 +42,7 @@ const HeroSection = () => {
                 </div>
             </div>
             <div className="rightSection">
-                <img onClick={handleInstagramClick} 
-                src="https://harendra.netlify.app/assets/p.jpg"   alt="Profile" />
+            <img src={MyImage} alt="example" />
             </div>
         </section>
     );

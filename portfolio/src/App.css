@@ -16,25 +16,6 @@ body {
 }
 
 
-
-
-.mobile-navbar-btn {
-    display: none;
-    background: transparent;
-    cursor: pointer;
-}
-
-.mobile-nav-icon {
-    height: 2rem;
-    width: 2rem;
-    color: #efecef;
-}
-
-.mobile-nav-icon[name="close-outline"] {
-    display: none;
-}
-
-
 .left {
     max-width: 100%;
     font-size: 3vh;

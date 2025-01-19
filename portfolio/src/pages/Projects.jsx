@@ -37,7 +37,7 @@ const Projects = () => {
           Quiz application which is made by using{" "}
           <a 
             href="https://opentb.com" 
-            className="text-blue-600 hover:text-blue-800 underline"
+            className= " hover:text-blue-800 underline-none"
             target="_blank" 
             rel="noopener noreferrer"
           >
@@ -47,7 +47,6 @@ const Projects = () => {
         </>
       ),
       projectUrl: "https://quizzy-world.netlify.app/",
-      onClick: () => openQuiz()
     },
     {
       title: "Med Harmony",
@@ -67,7 +66,7 @@ const Projects = () => {
     {
       title: "Message Guard",
       description: "A website which encrypts texts to maintain security while delivering any sensitive information",
-      projectUrl: "https://your-message-guard-url.com",
+      projectUrl: "https://message-guard.netlify.app/",
     }
   ];
 
